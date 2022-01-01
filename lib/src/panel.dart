@@ -608,7 +608,7 @@ class _SlidingUpPanelState extends State<SlidingUpPanel>
   Future<void> _animatePanelToPosition(double value,
       {Duration? duration, Curve curve = Curves.linear}) {
     assert(0.0 <= value && value <= 1.0);
-    setState(() => _scrollingEnabled = value == 1.0);
+    //setState(() => _scrollingEnabled = value == 1.0);
     return _ac.animateTo(value, duration: duration, curve: curve);
   }
 
@@ -624,7 +624,7 @@ class _SlidingUpPanelState extends State<SlidingUpPanel>
   //be between 0.0 and 1.0
   set _panelPosition(double value) {
     assert(0.0 <= value && value <= 1.0);
-    setState(() => _scrollingEnabled = value == 1.0);
+    //setState(() => _scrollingEnabled = value == 1.0);
     _ac.value = value;
   }
 
